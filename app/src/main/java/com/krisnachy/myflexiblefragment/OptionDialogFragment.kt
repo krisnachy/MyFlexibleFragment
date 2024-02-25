@@ -2,7 +2,6 @@ package com.krisnachy.myflexiblefragment
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,7 +45,7 @@ class OptionDialogFragment : DialogFragment() {
         btnChoose.setOnClickListener {
             val checkedRadioButtonId = rgOptions.checkedRadioButtonId
             if (checkedRadioButtonId != -1) {
-                var coach: String? = when (checkedRadioButtonId) {
+                val coach: String? = when (checkedRadioButtonId) {
                     R.id.rb_saf -> rbSaf.text.toString().trim()
                     R.id.rb_mou -> rbMou.text.toString().trim()
                     R.id.rb_lvg -> rbLvg.text.toString().trim()
